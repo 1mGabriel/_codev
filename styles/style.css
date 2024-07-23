@@ -4,10 +4,32 @@
   box-sizing: border-box;
 }
 body::-webkit-scrollbar{
-  background-color: #8F1F1F;
+  background-color: #000000;
 }
-body::-webkit-scrollbar-button{
-  background-color: #942626;
+body::-webkit-scrollbar-thumb{
+  background-color: #c41d1d;
+}
+header{
+  position: fixed;
+  background-color: #000;
+  z-index: 1;
+}
+#submenu-container{
+  display: none;
+  background-color: #1a1919;
+  z-index: 1;
+}
+#hide{
+  display: none;
+}
+.error{
+  color: #8F1F1F;
+  font-family: "lexend zetta";
+  font-size: 10px;
+}
+.form-container input,
+.form-container textarea{
+  color: #515151;
 }
 
 @media (max-width: 480px) {
@@ -249,6 +271,9 @@ body::-webkit-scrollbar-button{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: black;
+  }
+  .sobre img{
+    width: 80%;
   }
   .progress-container {
     width: 100%;
@@ -551,7 +576,8 @@ body::-webkit-scrollbar-button{
     width: 14px;
   }
 }
-@media (max-width: 1279px) {
+
+@media (min-width: 800px) {
   body {
     width: 100%;
     background-color: #000;
@@ -1126,22 +1152,8 @@ body::-webkit-scrollbar-button{
     width: 14px;
   }
 }
-@media (max-width:656px){
-  .progress{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .plan-section{
-    display: block;
-  }
-  .skill{
-    font-size: 8px;
-  }
-}
 
-@media (min-width: 1280px) and (max-width:2560px){
+/* @media (max-width:2560px){
   body {
     width: 100%;
     background-color: #000;
@@ -1715,4 +1727,4 @@ body::-webkit-scrollbar-button{
   .social{
     width: 14px;
   }
-}
+} */

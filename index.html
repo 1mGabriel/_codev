@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-Br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,44 +22,35 @@
     <!-- animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 
+     -->
+   
   </head>
   <body>
     <!-- header -->
     <header>
       <nav>
         <a href="#">
-          <img src="./images/logo.png" alt="Logo da Codev" />
+          <img src="./images/banner-logo.png" alt="Logo da Codev" />
         </a>
-        <svg
-          width="12"
-          height="14"
-          viewBox="0 0 12 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 8L6 13L11 8"
-            stroke="white"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M1 1L6 6L11 1"
-            stroke="white"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <svg id="menu-button" style="cursor: pointer;" width="21" height="15" viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.7693 5.15381H5.76929" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.7693 1.15381H1.76929" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.7693 9.15381H1.76929" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.7693 13.1538H5.76929" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          
       </nav>
-    </header>
-    <div id="submenu-container">
-      <div class="submenu">
-        <a href="#">.trilhas</a>
-        <a href="#">.planos</a>
-        <a href="#">.sobre</a>
-        <a href="#">.contato</a>
+      <div id="submenu-container">
+        <div class="submenu">
+          <a href="#trilhas">.trilhas</a>
+          <a href="#planos">.planos</a>
+          <a href="#sobre">.sobre</a>
+          <a href="#contato">.contato</a>
+        </div>
       </div>
-    </div>
+    </header>
+
     <!-- banner -->
     <div class="banner">
       <div class="banner-container">
@@ -68,22 +59,22 @@
       </div>
     </div>
     <!-- section trilhas -->
-    <div class="trilhas-container">
+    <div id="trilhas" class="trilhas-container">
       <div class="trilhas">
         <h2>Nossas trilhas front-end</h2>
         <p>clique em nossa tríade Web</p>
         <div class="linguagens">
-          <img
+          <img id="html"
             data-aos="zoom-in-down"
             src="./images/htmlk.png"
             alt="Imagem html"
           />
-          <img
+          <img id="css"
             data-aos="zoom-in-down"
             src="./images/css.png"
             alt="Imagem css"
           />
-          <img data-aos="zoom-in-down" src="./images/js.png" alt="Imagem Js" />
+          <img id="js" data-aos="zoom-in-down" src="./images/js.png" alt="Imagem Js" />
         </div>
       </div>
     </div>
@@ -455,9 +446,9 @@
       </div>
     </section>
 
-    <section class="sobre-container">
+    <section id="sobre" class="sobre-container">
       <div class="sobre">
-        <img src="./images/banner-logo.png" alt="" />
+        <img src="./images/logo.png" alt="" />
         <p>
           A Codev é a maior <span>MAIOR</span> plataforma de streamer de América
           do Sul, com aulas gravadas e ao vivo para você
@@ -538,7 +529,7 @@
         <p>Animação da interface</p>
       </div>
     </section>
-    <section class="plan-container">
+    <section id="planos" class="plan-container">
       <h2>PLANOS</h2>
       <p>ESCOLHA UM DE NOSSOS PLANOS QUE MELHOR TE ATENDER</p>
       <div class="plan-section">
@@ -587,16 +578,16 @@
         <img data-aos="zoom-out-up" src="./images/certificado.png" alt="">
       </div>
     </section>
-    <section class="form">
+    <section id="contato" class="form">
       <div class="form-container">
         <h2>ENTRE EM CONTATO</h2>
         <h2>TIRE QUALQUER DÚVIDA</h2>
         <form>
-          <input type="text" placeholder="NOME:">
-          <input type="text" placeholder="EMAIL:">
+          <input type="text" placeholder="NOME:" required>
+          <input type="text" placeholder="EMAIL:" required>
           <textarea placeholder="DEIXE SUA DÚVIDA OU FEEDBACK:">
           </textarea>
-          <button>ENVIAR</button>
+          <button style="cursor: pointer;">ENVIAR</button>
         </form>
       </div>
     </section>
@@ -615,12 +606,13 @@
     </footer>
 
     <!-- js -->
-    <script src="./script/index.js"></script>
+    <script src="./script/index.js" defer></script>
     <!-- jquery -->
+    <script src="./Jquery/jquery-3.7.1.js"></script>
     <script src="./Jquery/jquery.mask.min.js"></script>
     <script src="./Jquery/jquery.validate.min.js"></script>
     <script src="./Jquery/messages_pt_BR.min.js"></script>
-
+  
     <script>
       AOS.init();
     </script>
